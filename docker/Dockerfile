@@ -17,4 +17,5 @@ ENV uniresolver_driver_did_sov_walletName=default
 EXPOSE 8080
 
 RUN chmod a+rx /opt/driver-did-sov/docker/run-driver-did-sov.sh
+RUN chmod a+rwx /root/.m2
 CMD "/opt/driver-did-sov/docker/run-driver-did-sov.sh"
