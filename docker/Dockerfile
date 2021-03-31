@@ -15,7 +15,8 @@ RUN tar xvf jetty-distribution-9.4.15.v20190215.tar.gz
 ADD . /opt/driver-did-sov
 RUN cd /opt/driver-did-sov && \
   mvn clean install package -N -DskipTests -P build-war && \
-  cp /opt/driver-did-sov/target/uni-resolver-driver-did-sov-0.3-SNAPSHOT.war /jetty-distribution-9.4.15.v20190215/webapps/ROOT.war
+  cp /opt/driver-did-sov/target/uni-resolver-driver-did-sov-0.3-SNAPSHOT.war /jetty-distribution-9.4.15.v20190215/webapps/ROOT.war && \
+  chmod a+rw /opt/driver-did-sov
 
 # variables
 
