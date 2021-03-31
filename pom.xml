@@ -61,6 +61,13 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-war-plugin</artifactId>
+				        <configuration>
+				          <archive>
+				            <manifest>
+				              <addClasspath>true</addClasspath>
+				            </manifest>
+				          </archive>
+				        </configuration>
 					</plugin>
 				</plugins>
 			</build>
@@ -114,12 +121,10 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>decentralized-identity</groupId>
@@ -129,19 +134,16 @@
 			<groupId>org.hyperledger</groupId>
 			<artifactId>indy</artifactId>
 			<version>${indy.version}</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>${gson.version}</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.leonard</groupId>
 			<artifactId>base58</artifactId>
 			<version>${io.leonard-base58.version}</version>
-			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
