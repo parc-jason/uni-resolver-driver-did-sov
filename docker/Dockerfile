@@ -13,3 +13,5 @@ ENV uniresolver_driver_did_sov_libIndyPath=
 ENV uniresolver_driver_did_sov_poolConfigs=_;./sovrin/bcovrin-dev.txn
 ENV uniresolver_driver_did_sov_poolVersions=_;2
 ENV uniresolver_driver_did_sov_walletName=wallet
+
+USER jetty
